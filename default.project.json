@@ -2,19 +2,19 @@
   "name": "labRbx",
   "tree": {
     "$className": "DataModel",
-
     "ReplicatedStorage": {
+      "Mods": {
+        "$path": "Packages"
+      },
       "Shared": {
         "$path": "src/shared"
       }
     },
-
     "ServerScriptService": {
       "Server": {
         "$path": "src/server"
       }
     },
-
     "StarterPlayer": {
       "StarterPlayerScripts": {
         "Client": {
@@ -22,11 +22,7 @@
         }
       }
     },
-
     "Workspace": {
-      "$properties": {
-        "FilteringEnabled": true
-      },
       "Baseplate": {
         "$className": "Part",
         "$properties": {
