@@ -1,25 +1,25 @@
 {
   "name": "labRbx",
+  "$ignoreUnknownInstances": false,
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {
-      "Mods": {
+      "Imports": {
         "$path": "Packages"
       },
-      "Shared": {
-        "$path": "src/shared"
-      }
+      "Mods": {
+        "$path": "src/Mods"
+      },
+      "$path": "src/ReplicatedStorage"
     },
     "ServerScriptService": {
       "Server": {
-        "$path": "src/server"
+        "$path": "src/Server"
       }
     },
     "StarterPlayer": {
       "StarterPlayerScripts": {
-        "Client": {
-          "$path": "src/client"
-        }
+        "$path": "src/Client"
       }
     },
     "Workspace": {
