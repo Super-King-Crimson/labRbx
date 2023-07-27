@@ -1,5 +1,5 @@
 {
     "robloxLsp.typeChecking.options": {
-        "infer-instance-from-unknown": false,
+        
     }
 }

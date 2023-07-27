@@ -1,11 +1,4 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Packages = ReplicatedStorage.Packages
-local SleitSignal = require(Packages.SleitSignal)
+local Hitbox = require(ReplicatedStorage.Mods.Hitbox);
 
-print("Hi I'm Client")
-
-local signal = SleitSignal.new()
-
-local conn = signal:Connect()
-
-signal:Fire()
+local hitbox = Hitbox.new()
