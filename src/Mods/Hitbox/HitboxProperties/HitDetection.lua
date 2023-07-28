@@ -76,6 +76,8 @@ export type PartsInRadius = {
 type HitboxParams = RaycastParams | OverlapParams
 
 export type HitDetectionType = Blockcast | Spherecast | PartsInBox | PartsInPart | PartsInRadius
+
+export type HitDetectionStatic = typeof(HitDetection)
 --#endregion
 
-return HitDetection
+return HitDetection :: HitDetectionStatic

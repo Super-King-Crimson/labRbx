@@ -1,8 +1,6 @@
 local HitDetection = require(script.HitDetection)
 local Refresh = require(script.Refresh)
 
-local HitboxProperties = {}
-
 function HitboxProperties.create(detectionType: HitDetectionType, deactivateTimer: number?, maxHits: number?, refreshType: RefreshType?): HitboxProperties
     if deactivateTimer and deactivateTimer < 0 then deactivateTimer = nil end
     if maxHits and maxHits < 0 then maxHits = nil end
@@ -39,6 +37,8 @@ export type HitboxProperties = {
     active: boolean,
     checkingHits: boolean,
 }
+
+export type HitboxPropertiesStatic = typeof(HitboxProperties)
 --#endregion
 
-return HitboxProperties
+return HitboxProperties :: HitboxPropertiesStatic

@@ -16,4 +16,6 @@ export type RefreshType = {
     offDuration: number,
 }
 
-return Refresh
+export type RefreshStatic = typeof(Refresh)
+
+return Refresh :: RefreshStatic

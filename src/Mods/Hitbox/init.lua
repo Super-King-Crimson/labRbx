@@ -1,6 +1,11 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
 local Packages, Mods = ReplicatedStorage.Packages, ReplicatedStorage.Mods
+
+local HitboxProperties = require(script.HitboxProperties)
+local HitDetection = require(script.HitboxProperties.HitDetection)
+local Refresh = require(script.HitboxProperties.Refresh)
+
 local SleitSignal = require(ReplicatedStorage.Packages.SleitSignal)
 
 local taskWait, taskSpawn = task.wait, task.spawn
@@ -107,6 +112,7 @@ function Hitbox:deactivate()
     
 end
 
+--#region Types
 type _Hitbox = typeof(setmetatable({}, Hitbox)) & {
     _hitboxType: HitboxType,
 
@@ -142,5 +148,7 @@ export type Hitbox = {
 
     decativate: (Hitbox) -> (),
 }
+
+--#endregion
 
 return Hitbox
