@@ -1,6 +1,5 @@
 {
   "name": "labRbx",
-  "$ignoreUnknownInstances": false,
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {
