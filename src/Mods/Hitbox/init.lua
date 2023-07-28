@@ -42,8 +42,6 @@ function Hitbox.new(): Hitbox
     self._active = false
     self._checkingHits = false
 
-    self._groupMembers = {}
-
     self._timerInMs = nil
     self._timerTask = nil
         
@@ -61,6 +59,10 @@ function Hitbox.new(): Hitbox
     setmetatable(self, Hitbox)
     return self :: Hitbox
 end
+
+function Hitbox.from(properties: HitboxProperties): Hitbox
+
+end 
 
 function Hitbox:activate()
     if self._active == true then return end
@@ -105,12 +107,6 @@ function Hitbox:deactivate()
     
 end
 
-export type HitboxType =  "Blockcast" | 
-    "Spherecast" | 
-    "PartsInBox" |
-    "PartsInPart"|
-    "PartsInRadius"
-
 type _Hitbox = typeof(setmetatable({}, Hitbox)) & {
     _hitboxType: HitboxType,
 
@@ -142,12 +138,9 @@ type _Hitbox = typeof(setmetatable({}, Hitbox)) & {
 } 
 
 export type Hitbox = {
-    activate: (Hitbox),
+    activate: (Hitbox) -> (),
 
     decativate: (Hitbox) -> (),
-
-    group: ({Hitbox}) -> (),
 }
-
 
 return Hitbox
